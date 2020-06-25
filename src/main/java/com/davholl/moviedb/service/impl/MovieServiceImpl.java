@@ -20,6 +20,8 @@ public class MovieServiceImpl implements MovieService{
 
 	@Override
 	public ResponseEntity<?> getDetails(Integer movieId) {
+		Movie movienew = new Movie();
+		repository.save(movienew);
 		Optional<Movie> movie = repository.findById(movieId);
 		
 		if (movie.isPresent()) {
