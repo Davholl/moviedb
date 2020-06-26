@@ -3,14 +3,12 @@ package com.davholl.moviedb.model;
 import java.sql.Date;
 import java.util.Set;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToMany;
 
 @Entity
 public class Movie {
@@ -27,7 +25,7 @@ public class Movie {
 	
 	private Integer budget;
 	
-	@OneToMany
+	@ManyToMany
 	private Set<Genre> genres;
 	
 	private String homepage;
@@ -48,10 +46,10 @@ public class Movie {
 	
 	private String posterPath;
 	
-	@OneToMany
+	@ManyToMany
 	private Set<Company> productionCompanies;
 	
-	@OneToMany
+	@ManyToMany
 	private Set<Country> productionCountries;
 	
 	private Date releaseDate;
@@ -60,7 +58,7 @@ public class Movie {
 	
 	private Integer runtime;
 	
-	@OneToMany
+	@ManyToMany
 	private Set<Language> spokenLanguages;
 	
 	@Enumerated(EnumType.STRING)
