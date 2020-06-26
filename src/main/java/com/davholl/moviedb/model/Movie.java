@@ -70,9 +70,9 @@ public class Movie {
 	
 	private Boolean video;
 	
-	private Long voteAverage;
+	private Long voteAverage = 0L;
 	
-	private Integer voteCount;
+	private Integer voteCount = 0;
 
 	public Integer getId() {
 		return id;

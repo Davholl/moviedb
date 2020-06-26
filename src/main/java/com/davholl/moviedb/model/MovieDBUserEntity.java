@@ -18,16 +18,28 @@ public class MovieDBUserEntity {
 	@ManyToMany(fetch = FetchType.EAGER)
 	private Set<Movie> favoriteMovies;
 	
-	public Set<Movie> getFavoritos(){
-		return Set.copyOf(this.favoriteMovies);
-	}
-	
 	public String getUsername() {
 		return username;
 	}
 
 	public String getPassword() {
 		return password;
+	}
+	
+	public Set<Movie> getFavoritos(){
+		return Set.copyOf(this.favoriteMovies);
+	}
+	
+	public void adicionarFilmeFavorito(Movie movie) {
+		this.favoriteMovies.add(movie);
+	}
+	
+	public void adicionarFilmesFavoritos(Set<Movie> movies) {
+		this.favoriteMovies.addAll(movies);
+	}
+	
+	public void removerFilmeFavorito(Movie movie) {
+		this.favoriteMovies.remove(movie);
 	}
 
 }
