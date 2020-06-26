@@ -61,9 +61,6 @@ public class Movie {
 	@ManyToMany
 	private Set<Language> spokenLanguages;
 	
-	@Enumerated(EnumType.STRING)
-	private StatusEnum status;
-	
 	private String tagline;
 	
 	private String title;
@@ -148,10 +145,6 @@ public class Movie {
 
 	public Set<Language> getSpokenLanguages() {
 		return spokenLanguages;
-	}
-
-	public StatusEnum getStatus() {
-		return status;
 	}
 
 	public String getTagline() {

@@ -1,0 +1,8 @@
+insert into MOVIE (id, title, vote_count, vote_average) values ('1', 'Scooby Test', 1, 5.5)
+insert into MOVIE (id, title, vote_count, vote_average) values ('2', 'Lord of the Tests', 100, 9.8)
+insert into MOVIE (id, title, vote_count, vote_average) values ('3', 'Testrix', 20, 7.5)
+insert into MOVIE (id, title, vote_count, vote_average) values ('4', 'Test of the Flies', 0, 0)
+insert into MOVIE (id, title, vote_count, vote_average) values ('5', 'Testablanca', 40, 9.0)
+insert into MOVIE (id, title, vote_count, vote_average) values ('6', 'Citizen Test', 200, 10.0)
+insert into MOVIEDBUSER_ENTITY (username, password) values ('joaoteste', '$2a$10$CcKGa8P5VhGJVM3KBtHbVO9IRJSIaW7t5HQ3qJvFqlFB4KwqM4Oz2')
+insert into MOVIEDBUSER_ENTITY_FAVORITE_MOVIES (MOVIEDBUSER_ENTITY_USERNAME, FAVORITE_MOVIES_ID) values ('joaoteste', '1')

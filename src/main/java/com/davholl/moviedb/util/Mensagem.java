@@ -1,9 +1,18 @@
 package com.davholl.moviedb.util;
 
+import java.io.Serializable;
+
 import org.springframework.http.HttpStatus;
 
-public class Mensagem {
+public class Mensagem implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3615822399208264013L;
+	
+	public Mensagem() {}
+
 	public Mensagem(HttpStatus status) {
 		this.statusCode = String.valueOf(status.value());
 		this.statusMessage = status.getReasonPhrase();
